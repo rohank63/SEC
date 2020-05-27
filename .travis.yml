@@ -17,3 +17,7 @@ jobs:
     script:
     - python scr/file.py
     - python a.py
+
+
+after_success:
+- curl https://gist.githubusercontent.com/lxhunter/9d4310462b6972a3f57b5f914543fd51/raw/semver.sh | bash
