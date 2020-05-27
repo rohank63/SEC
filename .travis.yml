@@ -1,0 +1,19 @@
+os:
+- linux
+dist: bionic
+language: python
+
+services:
+- docker
+
+stages:
+- name: test
+
+
+jobs:
+  include:
+  - stage: test
+    name: Run style, unit and integration tests
+    script:
+    - python scr/file.py
+    - python a.py
