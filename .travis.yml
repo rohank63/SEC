@@ -6,6 +6,10 @@ language: python
 services:
 - docker
 
+env:
+  global:
+  - VERSION: 0.0.1
+
 stages:
 - name: test
 
@@ -20,4 +24,10 @@ jobs:
 
 
 after_success:
-- curl https://gist.githubusercontent.com/lxhunter/9d4310462b6972a3f57b5f914543fd51/raw/semver.sh | bash
+- docker build -t img .
+- docker run img
+- docker tag ${DOCKER_REPO}:latest
+- docker tag ${DOCKER_REPO}:${VERSION}
+- docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+- echo PUSHING DOCKER IMAGE
+- docker push ${DOCKER_USER}/${DOCKER_REPO}:${VERSION}
