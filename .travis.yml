@@ -26,7 +26,8 @@ jobs:
 after_success:
 - docker build -t img:latest .
 - docker run img:latest
-- docker ps 
-- docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+- docker tag ${DOCKER_REPO}:latest ${DOCKER_REPO}:${VERSION}
+- docker ps -a
+- echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USER} --password-stdin
 - echo PUSHING DOCKER IMAGE
-- docker push ${DOCKER_USER}/${DOCKER_REPO}:latest
+- docker push rohank63/img:latest
