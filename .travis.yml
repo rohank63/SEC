@@ -25,10 +25,11 @@ jobs:
 
 after_success:
 - export REPO=${DOCKER_USER}/${DOCKER_REPO} 
-- docker build -t ${REPO}:latest .
-- docker run ${REPO}:latest
-- docker tag ${REPO}:latest ${REPO}:${VERSION}
-- docker ps -a
+- docker build -t ${REPO} .
+- docker run ${REPO}
+- docker tag ${REPO} ${REPO}:${VERSION}
+- docker tag ${REPO} ${REPO}:latest
+- docker images
 - echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USER} --password-stdin
 - echo PUSHING DOCKER IMAGE
-- docker push ${REPO}:${VERSION}
+- docker push ${REPO}
