@@ -26,6 +26,7 @@ jobs:
     - docker build -t ${REPO} .
   - stage: run
     name: running Docker image
+    script:
     - docker run ${REPO}
     - docker tag ${REPO} ${REPO}:${VERSION}
     - docker tag ${REPO} ${REPO}:latest
