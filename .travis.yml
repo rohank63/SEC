@@ -22,14 +22,13 @@ jobs:
     script:
     - python scr/file.py
     - python a.py
-    - export REPO=${DOCKER_USER}/${DOCKER_REPO} 
-    - docker build -t ${REPO} .
+    - docker build -t img .
   - stage: run
     name: running Docker image
     script:
-    - docker run ${REPO}
-    - docker tag ${REPO} ${REPO}:${VERSION}
-    - docker tag ${REPO} ${REPO}:latest
+    - docker run img
+    - docker tag img img:${VERSION}
+    - docker tag img img:latest
     - docker images
 
 
