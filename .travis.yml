@@ -12,7 +12,7 @@ env:
 
 stages:
 - name: test
-- name: run
+- name: print
 
 
 jobs:
@@ -26,10 +26,7 @@ jobs:
   - stage: run
     name: running Docker image
     script:
-    - docker run img
-    - docker tag img img:${VERSION}
-    - docker tag img img:latest
-    - docker images
+    - print("ROhan")
 
 
 
