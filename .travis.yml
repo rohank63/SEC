@@ -24,8 +24,8 @@ jobs:
     - python scr/file.py
     - python a.py
     - docker build -t img .
-  - stage: run
-    name: running Docker image
+  - stage: print
+    name: testing branch conditioin
     script:
     - python a.py
 
