@@ -5,8 +5,8 @@ channels:
 dependencies:
   - pip=20.2.3
   - python=3.8.5
-  - setuptools=50.0.0
+  #- setuptools=50.0.0
   - biopython=1.78
-  - kallisto=0.46.2
+  #- kallisto=0.46.2
   - pip:
     - -e .
