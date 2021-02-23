@@ -7,6 +7,6 @@ dependencies:
   - python=3.8.5
   #- setuptools=50.0.0
   - biopython=1.78
-  #- kallisto=0.46.2
+  - kallisto=0.46.1
   - pip:
     - -e .
