@@ -3,7 +3,7 @@ channels:
   - defaults
   - bioconda
 dependencies:
-  - pip=20.2.3
+  - pip=21.0.1
   - python=3.8.5
   #- setuptools=50.0.0
   - biopython=1.78
