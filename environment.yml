@@ -8,6 +8,6 @@ dependencies:
   #- setuptools=52.0.0
   #- libgcc-ng=7.3.0
   #- biopython=1.78
-  - kallisto=0.45.0
+  - kallisto=0.44.0
   - pip:
     - -e .
