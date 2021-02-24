@@ -6,6 +6,7 @@ dependencies:
   - pip=21.0.1
   - python=3.8.5
   #- setuptools=50.0.0
+  - libgcc-ng=9.3.0
   - biopython=1.78
   - kallisto=0.46.2
   - pip:
