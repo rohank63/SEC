@@ -7,7 +7,7 @@ dependencies:
   - python=3.8.5
   #- setuptools=52.0.0
   #- libgcc-ng=7.3.0
-  #- biopython=1.78
+  - biopython=1.72
   - kallisto=0.44.0
   - pip:
     - -e .
