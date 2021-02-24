@@ -12,6 +12,7 @@ install:
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
+  - conda update -all
   - conda info -a
   - conda env create --file environment.yml
   - conda env update --file environment-dev.yml
