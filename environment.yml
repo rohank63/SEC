@@ -3,9 +3,9 @@ channels:
   - defaults
   - bioconda
 dependencies:
-  - biopython=1.77
+  - biopython=1.78
   - star=2.7.6
-  - pysam=0.15.4
+  - pysam=0.16.0
   - pip=20.2.3
   - python=3.8.5
   - pip:
