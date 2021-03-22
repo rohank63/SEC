@@ -15,4 +15,4 @@ install:
   - conda update --all
   - conda info -a
   - conda env create --file environment.yml
-  - conda env update --file environment-dev.yml
+  - python script.py
