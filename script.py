@@ -1,11 +1,17 @@
 import infer_organism
-import infer_adapter
+
 import subprocess as sp
-import infer_read_orientation
+
 
 
 print(infer_organism.infer(
-	file_1="./files/first_mate.fastq",
+	file_1="./first_mate.fastq",
+	min_match=2,factor=1,
+	transcript_fasta="transcripts.fasta.zip"
+	))
+
+print(infer_organism.infer(
+	file_1="./SRR13496438.fastq.gz",
 	min_match=2,factor=1,
 	transcript_fasta="transcripts.fasta.zip"
 	))
