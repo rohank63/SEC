@@ -1,4 +1,4 @@
-
+name: rohan
 channels:
   - defaults
   - bioconda
